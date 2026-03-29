@@ -1,0 +1,54 @@
+name: ytedidong
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- UI & TIỆN ÍCH ---
+  cupertino_icons: ^1.0.6
+  font_awesome_flutter: ^10.7.0
+  intl: ^0.19.0
+  fl_chart: ^0.68.0
+  qr_flutter: ^4.1.0
+
+  # --- MẠNG & DỮ LIỆU ---
+  http: ^1.2.0
+  shared_preferences: ^2.3.0
+
+  # --- TÍNH NĂNG ---
+  url_launcher: ^6.2.1
+  geolocator: ^11.0.0
+  
+  # Giữ bản 12.0.1 bạn vừa cài (để không bị lỗi xung đột version nữa)
+  permission_handler: ^12.0.1
+  
+  path_provider: ^2.1.2
+
+  # --- VIDEO CALL ---
+  # Giữ trống để nó tự lấy bản mới nhất bạn vừa tải (4.22.2)
+  zego_uikit_prebuilt_call: 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/doctor.png
+    - assets/images/hutech_logo.png
+    - assets/images/accident.png
+
+# --- CHỐT CHẶN (QUAN TRỌNG NHẤT) ---
+# Dòng này sẽ ép hệ thống dùng bản Engine 3.22.1
+# Đây là "thuốc giải" duy nhất cho lỗi thiếu tham số (17 vs 15)
+dependency_overrides:
+  zego_express_engine: 3.22.1
